@@ -12,8 +12,24 @@
 
     <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
 
     <title>Domestireg SP</title>
+
+    <style>
+      .owl-carousel div h2, .owl-carousel div .textoverlay {
+        position:absolute;
+        /* color:#FFF; */
+        display:block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        -webkit-transform: translate(-50%, -50%);
+      }
+      .bg-black {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -50,10 +66,22 @@
 
       <!-- Set up your HTML -->
       <div class="owl-carousel owl-theme">
-        <img src="img/slider1.png" alt="domestireg domestics">
-        <img src="img/slider2.jpg" alt="domestireg domestics">
-        <img src="img/slider1.jpg" alt="domestireg domestics">
-        <img src="img/slider4.jpg" alt="domestireg domestics">
+        <div class="text-overlay">
+          <h2 class="p-3 mb-2 bg-secondary text-white">Don’t play Russian Roulette with your family’’s  health and safety</h2>
+          <img src="img/slider0.jpg" alt="domestireg domestics">
+        </div>
+        <div class="text-overlay">
+          <h2 class="p-3 mb-2 bg-secondary text-white">Be sure before you hire</h2>
+          <img src="img/slider1.jpg" alt="domestireg domestics">
+        </div>
+        <div class="text-overlay">
+          <h2 class="p-3 mb-2 bg-secondary text-white">Quality checked, Realtime results</h2>
+          <img src="img/slider2.jpg" alt="domestireg domestics">
+        </div>
+        <div class="text-overlay">
+          <h2 class="p-3 mb-2 bg-secondary text-white">Hello world</h2>
+          <img src="img/slider4.jpg" alt="domestireg domestics">
+        </div>
       </div>
     </header>
     <main>
@@ -294,17 +322,11 @@
         $(".owl-carousel").owlCarousel({
           items:1,
           loop:true,
+          animateIn: 'animate__fadeIn',
+          animateOut: 'animate__fadeOut',
           autoplay:true,
           autoplayTimeout:2000,
           autoplayHoverPause:true,
-          // autoHeight:true,
-          // autoHeightClass: 'owl-height'
-          // responsiveClass:true,
-          // responsive:{
-          //   0:{
-          //     nav:true
-          //   },
-          // }
         });
       });
     </script>
